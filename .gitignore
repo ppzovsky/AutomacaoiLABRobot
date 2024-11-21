@@ -1,0 +1,36 @@
+# Arquivos de saída gerados pelo Robot Framework
+output.xml
+log.html
+report.html
+debug.log
+
+# Diretório de resultados (modifique conforme seu projeto)
+results/
+.results/
+
+# Configurações do ambiente virtual (se Python for usado)
+venv/
+.env/
+
+# Arquivos de dependências
+__pycache__/
+*.pyc
+*.pyo
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs gerais e temporários
+*.log
+*.tmp
+*.bak
+
+# Arquivos de IDEs (como VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de teste temporários
+*.robot~
+*.resource~
