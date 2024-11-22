@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library            ScreenCapLibrary
 Resource    ../variables/loginvariables.robot
 
 *** Keywords ***
@@ -46,4 +47,5 @@ E a pagina devera conter
     Page Should Contain    ${text}
 
 E fecha Browser
+    Stop Video Recording 
     Close Browser

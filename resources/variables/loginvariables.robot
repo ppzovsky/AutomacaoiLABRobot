@@ -1,5 +1,6 @@
 *** Settings ***
 Library    DateTime
+Library    FakerLibrary    locale=pt_BR
 *** Variables ***
 ${URL_LOGIN_PAGE}        https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 ${URL_DASHBOARD_PAGE}    https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
@@ -7,10 +8,11 @@ ${USERNAME_FIELD}        name=username
 ${PASSWORD_FIELD}        name=password
 ${FORM_CLASS}            class:oxd-form
 ${FORGOT_CLASS}          class:orangehrm-login-forgot-header
+${CSV_FILE}            logins_senhas.csv
 ${VALID_USERNAME}       Admin
 ${VALID_PASSWORD}       admin123
-${INVALID_PASSWORD}     adm123
-${INVALID_USERNAME}     Administrador
+${INVALID_PASSWORD}     FakerLibrary.Password
+${INVALID_USERNAME}     FakerLibrary.First Name
 ${EMPTY_CREDENTIALS}    ${EMPTY}
 ${URL_RESET_PASSWORD}   https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode
 ${URL_LINKEDIN}    https://www.linkedin.com/company/orangehrm/mycompany/
