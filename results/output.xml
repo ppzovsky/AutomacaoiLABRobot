@@ -1,1241 +1,1360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.1 on win32)" generated="2024-11-19T13:57:52.141580" rpa="false" schemaversion="5">
-<suite id="s1" name="AutomacaoiLABRobot" source="C:\Users\joaop\OneDrive\Área de Trabalho\iLab\Estágio\AutomacaoiLABRobot">
-<suite id="s1-s1" name="Tests" source="C:\Users\joaop\OneDrive\Área de Trabalho\iLab\Estágio\AutomacaoiLABRobot\tests">
-<suite id="s1-s1-s1" name="Logintests" source="C:\Users\joaop\OneDrive\Área de Trabalho\iLab\Estágio\AutomacaoiLABRobot\tests\logintests.robot">
-<test id="s1-s1-s1-t1" name="CT01 - Login bem-sucedido" line="8">
+<robot generator="Robot 7.1 (Python 3.12.1 on win32)" generated="2024-11-21T20:08:03.411521" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\joaop\OneDrive\Área de Trabalho\iLab\Estágio\AutomacaoiLABRobot\tests">
+<suite id="s1-s1" name="Logintests" source="C:\Users\joaop\OneDrive\Área de Trabalho\iLab\Estágio\AutomacaoiLABRobot\tests\logintests.robot">
+<test id="s1-s1-t1" name="CT01 - Login bem-sucedido" line="11">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:08:06.441345" level="INFO">Automatically setting a fps of 14.0</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:08:04.301831" elapsed="2.144516"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:57:52.535930" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:57:53.231284" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:06.448416" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:08:07.082384" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:57:52.535930" elapsed="6.200463"/>
+<status status="PASS" start="2024-11-21T20:08:06.448416" elapsed="5.310208"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:01.738116" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:08:14.760472" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:57:58.737485" elapsed="3.000631"/>
+<status status="PASS" start="2024-11-21T20:08:11.758624" elapsed="3.001848"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:57:52.535930" elapsed="9.202186"/>
+<status status="PASS" start="2024-11-21T20:08:06.447347" elapsed="8.313125"/>
 </kw>
 <kw name="E Preencha o formulario com os dados" owner="loginkeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:01.741274" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<msg time="2024-11-21T20:08:14.768487" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:01.741274" elapsed="0.175255"/>
+<status status="PASS" start="2024-11-21T20:08:14.767487" elapsed="0.695806"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:01.918037" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<msg time="2024-11-21T20:08:15.463293" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:01.918037" elapsed="0.204812"/>
+<status status="PASS" start="2024-11-21T20:08:15.463293" elapsed="0.394908"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <arg>${VALID_PASSWORD}</arg>
-<status status="PASS" start="2024-11-19T13:58:01.738116" elapsed="0.384733"/>
+<status status="PASS" start="2024-11-21T20:08:14.766488" elapsed="1.091713"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:03.624787" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:17.361729" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:02.123870" elapsed="1.500917"/>
+<status status="PASS" start="2024-11-21T20:08:15.861198" elapsed="1.500531"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:03.717795" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT01_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT01_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:17.498439" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT01_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT01_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:03.624787" elapsed="0.093008"/>
+<status status="PASS" start="2024-11-21T20:08:17.361729" elapsed="0.136710"/>
 </kw>
 <arg>CT01_CredenciaisPreenchidas</arg>
-<status status="PASS" start="2024-11-19T13:58:02.122849" elapsed="1.594946"/>
+<status status="PASS" start="2024-11-21T20:08:15.860195" elapsed="1.638244"/>
 </kw>
 <kw name="Quando clicar no botao &quot;Login&quot;" owner="loginkeywords">
 <kw name="Submit Form" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:03.720370" level="INFO">Submitting form 'class:oxd-form'.</msg>
+<msg time="2024-11-21T20:08:17.506434" level="INFO">Submitting form 'class:oxd-form'.</msg>
 <arg>${FORM_CLASS}</arg>
 <doc>Submits a form identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:03.720370" elapsed="0.964940"/>
+<status status="PASS" start="2024-11-21T20:08:17.505458" elapsed="0.058054"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:03.719283" elapsed="0.966027"/>
+<status status="PASS" start="2024-11-21T20:08:17.502435" elapsed="0.061077"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:04.702777" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index</msg>
+<msg time="2024-11-21T20:08:18.488501" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:58:04.689641" elapsed="0.014137"/>
+<status status="PASS" start="2024-11-21T20:08:17.567512" elapsed="0.920989"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:58:04.704775" elapsed="0.001317"/>
+<status status="PASS" start="2024-11-21T20:08:18.488501" elapsed="0.001005"/>
 </kw>
 <arg>${URL_DASHBOARD_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:58:04.687651" elapsed="0.018441"/>
+<status status="PASS" start="2024-11-21T20:08:17.565518" elapsed="0.923988"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:06.209151" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:19.991075" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:04.707545" elapsed="1.501606"/>
+<status status="PASS" start="2024-11-21T20:08:18.489506" elapsed="1.502084"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:06.367326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT01_DashboardPage.png"&gt;&lt;img src="screenshots/CT01_DashboardPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:20.558103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT01_DashboardPage.png"&gt;&lt;img src="screenshots/CT01_DashboardPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:06.209151" elapsed="0.158175"/>
+<status status="PASS" start="2024-11-21T20:08:19.994607" elapsed="0.563496"/>
 </kw>
 <arg>CT01_DashboardPage</arg>
-<status status="PASS" start="2024-11-19T13:58:04.707545" elapsed="1.661269"/>
+<status status="PASS" start="2024-11-21T20:08:18.489506" elapsed="2.069607"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:58:06.370113" elapsed="4.018757"/>
+<status status="PASS" start="2024-11-21T20:08:20.589115" elapsed="2.936121"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:06.368814" elapsed="4.020056"/>
+<status status="PASS" start="2024-11-21T20:08:20.588117" elapsed="2.938366"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:57:52.520090" elapsed="17.868780"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:08:23.684060" level="INFO" html="true">&lt;a href="videos/CT01%20-%20Login%20bem-sucedido%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_4.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT01%20-%20Login%20bem-sucedido%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_4.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:08:23.526483" elapsed="0.158931"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:08:04.299336" elapsed="19.386078"/>
 </test>
-<test id="s1-s1-s1-t2" name="CT02 - Login com senha incorreta" line="17">
+<test id="s1-s1-t2" name="CT02 - Login com senha incorreta" line="20">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:08:25.827467" level="INFO">Automatically setting a fps of 12.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:08:23.688320" elapsed="2.142971"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:10.396121" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:58:11.047624" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:25.833546" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:08:26.443633" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:58:10.396121" elapsed="4.809220"/>
+<status status="PASS" start="2024-11-21T20:08:25.833546" elapsed="4.954471"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:18.207151" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:08:33.788266" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:15.205854" elapsed="3.001803"/>
+<status status="PASS" start="2024-11-21T20:08:30.788017" elapsed="3.000249"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:10.390913" elapsed="7.816744"/>
+<status status="PASS" start="2024-11-21T20:08:25.832499" elapsed="7.955767"/>
 </kw>
 <kw name="E Preencha o formulario com os dados" owner="loginkeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:18.211288" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<msg time="2024-11-21T20:08:33.790849" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:18.209756" elapsed="0.192580"/>
+<status status="PASS" start="2024-11-21T20:08:33.789868" elapsed="0.213319"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:18.404515" level="INFO">Typing text 'adm123' into text field 'name=password'.</msg>
+<msg time="2024-11-21T20:08:34.004339" level="INFO">Typing text 'adm123' into text field 'name=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:18.403429" elapsed="0.159825"/>
+<status status="PASS" start="2024-11-21T20:08:34.004339" elapsed="0.148062"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2024-11-19T13:58:18.208675" elapsed="0.354579"/>
+<status status="PASS" start="2024-11-21T20:08:33.788838" elapsed="0.363563"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:20.069111" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:35.654548" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:18.568251" elapsed="1.500860"/>
+<status status="PASS" start="2024-11-21T20:08:34.153393" elapsed="1.501155"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:20.195337" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT02_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT02_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:35.747048" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT02_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT02_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:20.069111" elapsed="0.126226"/>
+<status status="PASS" start="2024-11-21T20:08:35.654548" elapsed="0.092500"/>
 </kw>
 <arg>CT02_CredenciaisPreenchidas</arg>
-<status status="PASS" start="2024-11-19T13:58:18.566568" elapsed="1.628769"/>
+<status status="PASS" start="2024-11-21T20:08:34.153393" elapsed="1.593655"/>
 </kw>
 <kw name="Quando clicar no botao &quot;Login&quot;" owner="loginkeywords">
 <kw name="Submit Form" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:20.199242" level="INFO">Submitting form 'class:oxd-form'.</msg>
+<msg time="2024-11-21T20:08:35.748047" level="INFO">Submitting form 'class:oxd-form'.</msg>
 <arg>${FORM_CLASS}</arg>
 <doc>Submits a form identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:20.199242" elapsed="0.952586"/>
+<status status="PASS" start="2024-11-21T20:08:35.748047" elapsed="0.988447"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:20.197830" elapsed="0.955006"/>
+<status status="PASS" start="2024-11-21T20:08:35.747048" elapsed="0.989446"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:21.168147" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<msg time="2024-11-21T20:08:36.748293" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:58:21.153813" elapsed="0.014334"/>
+<status status="PASS" start="2024-11-21T20:08:36.737499" elapsed="0.010794"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:58:21.168147" elapsed="0.000998"/>
+<status status="PASS" start="2024-11-21T20:08:36.748293" elapsed="0.000000"/>
 </kw>
 <arg>${URL_LOGIN_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:58:21.152836" elapsed="0.016309"/>
+<status status="PASS" start="2024-11-21T20:08:36.736494" elapsed="0.011799"/>
 </kw>
 <kw name="E a pagina devera conter" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:22.673476" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:38.249921" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:21.172192" elapsed="1.501284"/>
+<status status="PASS" start="2024-11-21T20:08:36.749339" elapsed="1.500582"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:22.698110" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<msg time="2024-11-21T20:08:38.274819" level="INFO">Current page contains text 'Invalid credentials'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-19T13:58:22.673476" elapsed="0.024634"/>
+<status status="PASS" start="2024-11-21T20:08:38.249921" elapsed="0.025895"/>
 </kw>
 <arg>Invalid credentials</arg>
-<status status="PASS" start="2024-11-19T13:58:21.170146" elapsed="1.527964"/>
+<status status="PASS" start="2024-11-21T20:08:36.748293" elapsed="1.527523"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:24.202024" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:39.777244" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:22.701809" elapsed="1.501700"/>
+<status status="PASS" start="2024-11-21T20:08:38.276831" elapsed="1.500413"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:24.303695" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT02_MensagemDeErro.png"&gt;&lt;img src="screenshots/CT02_MensagemDeErro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:39.857683" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT02_MensagemDeErro.png"&gt;&lt;img src="screenshots/CT02_MensagemDeErro.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:24.203509" elapsed="0.100186"/>
+<status status="PASS" start="2024-11-21T20:08:39.777244" elapsed="0.081444"/>
 </kw>
 <arg>CT02_MensagemDeErro</arg>
-<status status="PASS" start="2024-11-19T13:58:22.698110" elapsed="1.605585"/>
+<status status="PASS" start="2024-11-21T20:08:38.275816" elapsed="1.582872"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:58:24.303695" elapsed="2.358427"/>
+<status status="PASS" start="2024-11-21T20:08:39.860674" elapsed="2.535044"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:24.303695" elapsed="2.359266"/>
+<status status="PASS" start="2024-11-21T20:08:39.859683" elapsed="2.536035"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:10.390913" elapsed="16.272048"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:08:42.434341" level="INFO" html="true">&lt;a href="videos/CT02%20-%20Login%20com%20senha%20incorreta%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT02%20-%20Login%20com%20senha%20incorreta%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:08:42.396719" elapsed="0.037622"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:08:23.686423" elapsed="18.750071"/>
 </test>
-<test id="s1-s1-s1-t3" name="CT03 - Login com usuario nao registrado" line="27">
+<test id="s1-s1-t3" name="CT03 - Login com usuario nao registrado" line="30">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:08:44.546023" level="INFO">Automatically setting a fps of 14.0</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:08:42.440513" elapsed="2.108141"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:26.671078" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:58:27.316549" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:44.551149" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:08:45.038368" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:58:26.668281" elapsed="4.805157"/>
+<status status="PASS" start="2024-11-21T20:08:44.551149" elapsed="5.536053"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:34.474955" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:08:53.088477" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:31.473438" elapsed="3.001517"/>
+<status status="PASS" start="2024-11-21T20:08:50.087202" elapsed="3.001786"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:26.668281" elapsed="7.807684"/>
+<status status="PASS" start="2024-11-21T20:08:44.551149" elapsed="8.537839"/>
 </kw>
 <kw name="E Preencha o formulario com os dados" owner="loginkeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:34.478281" level="INFO">Typing text 'Administrador' into text field 'name=username'.</msg>
+<msg time="2024-11-21T20:08:53.091999" level="INFO">Typing text 'Administrador' into text field 'name=username'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:34.477281" elapsed="0.228131"/>
+<status status="PASS" start="2024-11-21T20:08:53.091999" elapsed="0.225257"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:34.708744" level="INFO">Typing text 'adm123' into text field 'name=password'.</msg>
+<msg time="2024-11-21T20:08:53.317256" level="INFO">Typing text 'adm123' into text field 'name=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:34.707721" elapsed="0.140859"/>
+<status status="PASS" start="2024-11-21T20:08:53.317256" elapsed="0.133317"/>
 </kw>
 <arg>${INVALID_USERNAME}</arg>
 <arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2024-11-19T13:58:34.475965" elapsed="0.373616"/>
+<status status="PASS" start="2024-11-21T20:08:53.090011" elapsed="0.360562"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:36.352178" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:54.952313" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:34.850583" elapsed="1.501595"/>
+<status status="PASS" start="2024-11-21T20:08:53.451804" elapsed="1.500509"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:36.479679" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT03_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT03_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:55.026216" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT03_CredenciaisPreenchidas.png"&gt;&lt;img src="screenshots/CT03_CredenciaisPreenchidas.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:36.352178" elapsed="0.127501"/>
+<status status="PASS" start="2024-11-21T20:08:54.952313" elapsed="0.073903"/>
 </kw>
 <arg>CT03_CredenciaisPreenchidas</arg>
-<status status="PASS" start="2024-11-19T13:58:34.849581" elapsed="1.630098"/>
+<status status="PASS" start="2024-11-21T20:08:53.450573" elapsed="1.575643"/>
 </kw>
 <kw name="Quando clicar no botao &quot;Login&quot;" owner="loginkeywords">
 <kw name="Submit Form" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:36.493374" level="INFO">Submitting form 'class:oxd-form'.</msg>
+<msg time="2024-11-21T20:08:55.027217" level="INFO">Submitting form 'class:oxd-form'.</msg>
 <arg>${FORM_CLASS}</arg>
 <doc>Submits a form identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:36.493374" elapsed="0.678292"/>
+<status status="PASS" start="2024-11-21T20:08:55.027217" elapsed="0.732990"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:36.479679" elapsed="0.691987"/>
+<status status="PASS" start="2024-11-21T20:08:55.027217" elapsed="0.732990"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:37.192628" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<msg time="2024-11-21T20:08:55.777147" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:58:37.172851" elapsed="0.019777"/>
+<status status="PASS" start="2024-11-21T20:08:55.761194" elapsed="0.015953"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:58:37.193850" elapsed="0.001538"/>
+<status status="PASS" start="2024-11-21T20:08:55.777147" elapsed="0.001000"/>
 </kw>
 <arg>${URL_LOGIN_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:58:37.172851" elapsed="0.022537"/>
+<status status="PASS" start="2024-11-21T20:08:55.760207" elapsed="0.017940"/>
 </kw>
 <kw name="E a pagina devera conter" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:38.698210" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:57.278592" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:37.196386" elapsed="1.501824"/>
+<status status="PASS" start="2024-11-21T20:08:55.778147" elapsed="1.500953"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:38.732223" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<msg time="2024-11-21T20:08:57.305241" level="INFO">Current page contains text 'Invalid credentials'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-19T13:58:38.698210" elapsed="0.034013"/>
+<status status="PASS" start="2024-11-21T20:08:57.279100" elapsed="0.026141"/>
 </kw>
 <arg>Invalid credentials</arg>
-<status status="PASS" start="2024-11-19T13:58:37.196386" elapsed="1.535837"/>
+<status status="PASS" start="2024-11-21T20:08:55.778147" elapsed="1.527094"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:40.238110" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:08:58.806771" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:38.737772" elapsed="1.500338"/>
+<status status="PASS" start="2024-11-21T20:08:57.306602" elapsed="1.500169"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:40.341710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT03_MensagemDeErro.png"&gt;&lt;img src="screenshots/CT03_MensagemDeErro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:08:58.888675" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT03_MensagemDeErro.png"&gt;&lt;img src="screenshots/CT03_MensagemDeErro.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:40.238110" elapsed="0.104504"/>
+<status status="PASS" start="2024-11-21T20:08:58.806771" elapsed="0.081904"/>
 </kw>
 <arg>CT03_MensagemDeErro</arg>
-<status status="PASS" start="2024-11-19T13:58:38.736987" elapsed="1.605970"/>
+<status status="PASS" start="2024-11-21T20:08:57.306602" elapsed="1.582073"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:58:40.345586" elapsed="2.389376"/>
+<status status="PASS" start="2024-11-21T20:08:58.890183" elapsed="2.595333"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:40.343573" elapsed="2.391389"/>
+<status status="PASS" start="2024-11-21T20:08:58.889674" elapsed="2.595842"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:26.665950" elapsed="16.069012"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:09:01.582104" level="INFO" html="true">&lt;a href="videos/CT03%20-%20Login%20com%20usuario%20nao%20registrado%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT03%20-%20Login%20com%20usuario%20nao%20registrado%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:09:01.486513" elapsed="0.095591"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:08:42.438501" elapsed="19.144609"/>
 </test>
-<test id="s1-s1-s1-t4" name="CT04 - Campos obrigatorios nao preenchidos" line="37">
+<test id="s1-s1-t4" name="CT04 - Campos obrigatorios nao preenchidos" line="40">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:09:03.730319" level="INFO">Automatically setting a fps of 14.0</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:09:01.584105" elapsed="2.149212"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:42.737196" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:58:43.410736" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:03.737317" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:09:04.224297" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:58:42.737196" elapsed="5.324345"/>
+<status status="PASS" start="2024-11-21T20:09:03.736317" elapsed="3.508522"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:51.061795" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:09:10.246398" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:48.061541" elapsed="3.000254"/>
+<status status="PASS" start="2024-11-21T20:09:07.244839" elapsed="3.001559"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:42.737196" elapsed="8.325670"/>
+<status status="PASS" start="2024-11-21T20:09:03.735316" elapsed="6.511082"/>
 </kw>
 <kw name="E Preencha o formulario com os dados" owner="loginkeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:51.066291" level="INFO">Typing text '' into text field 'name=username'.</msg>
+<msg time="2024-11-21T20:09:10.247920" level="INFO">Typing text '' into text field 'name=username'.</msg>
+<msg time="2024-11-21T20:09:10.340797" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:09:10.340797" level="FAIL">Element with locator 'name=username' not found.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:51.066291" elapsed="0.125970"/>
+<status status="FAIL" start="2024-11-21T20:09:10.246908" elapsed="0.179954">Element with locator 'name=username' not found.</status>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:51.192261" level="INFO">Typing text '' into text field 'name=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:51.192261" elapsed="0.138024"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.427882" elapsed="0.000000"/>
 </kw>
 <arg>${EMPTY_CREDENTIALS}</arg>
 <arg>${EMPTY_CREDENTIALS}</arg>
-<status status="PASS" start="2024-11-19T13:58:51.063682" elapsed="0.266603"/>
+<status status="FAIL" start="2024-11-21T20:09:10.246908" elapsed="0.180974">Element with locator 'name=username' not found.</status>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:52.835709" level="INFO">Slept 1 second 500 milliseconds.</msg>
-<arg>1.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:51.334393" elapsed="1.502073"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:52.909747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT04_CredenciaisEmBranco.png"&gt;&lt;img src="screenshots/CT04_CredenciaisEmBranco.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>../results/screenshots/${name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:52.836984" elapsed="0.072763"/>
-</kw>
 <arg>CT04_CredenciaisEmBranco</arg>
-<status status="PASS" start="2024-11-19T13:58:51.331262" elapsed="1.578485"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.427882" elapsed="0.000970"/>
 </kw>
 <kw name="Quando clicar no botao &quot;Login&quot;" owner="loginkeywords">
-<kw name="Submit Form" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:52.917065" level="INFO">Submitting form 'class:oxd-form'.</msg>
-<arg>${FORM_CLASS}</arg>
-<doc>Submits a form identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:58:52.917065" elapsed="0.047889"/>
-</kw>
-<status status="PASS" start="2024-11-19T13:58:52.917065" elapsed="0.047889"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.428852" elapsed="0.000000"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:52.984285" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
-<var>${current_url}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:58:52.966543" elapsed="0.017742"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${current_url}</arg>
-<arg>${expected_url}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:58:52.985331" elapsed="0.000000"/>
-</kw>
 <arg>${URL_LOGIN_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:58:52.965895" elapsed="0.019436"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.428852" elapsed="0.000000"/>
 </kw>
 <kw name="E a pagina devera conter" owner="loginkeywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:54.488219" level="INFO">Slept 1 second 500 milliseconds.</msg>
-<arg>1.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:52.987716" elapsed="1.500503"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:54.512550" level="INFO">Current page contains text 'Required'.</msg>
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-19T13:58:54.488219" elapsed="0.025039"/>
-</kw>
 <arg>Required</arg>
-<status status="PASS" start="2024-11-19T13:58:52.985331" elapsed="1.527927"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.429873" elapsed="0.000000"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:58:56.015949" level="INFO">Slept 1 second 500 milliseconds.</msg>
-<arg>1.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:58:54.513258" elapsed="1.502691"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:56.108521" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT04_MensagemDeErro.png"&gt;&lt;img src="screenshots/CT04_MensagemDeErro.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>../results/screenshots/${name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:58:56.015949" elapsed="0.093856"/>
-</kw>
 <arg>CT04_MensagemDeErro</arg>
-<status status="PASS" start="2024-11-19T13:58:54.513258" elapsed="1.596547"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.429873" elapsed="0.000000"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:58:56.110891" elapsed="2.312785"/>
+<status status="NOT RUN" start="2024-11-21T20:09:10.430853" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:56.110891" elapsed="2.312785"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:09:10.466717" level="INFO" html="true">&lt;a href="videos/CT04%20-%20Campos%20obrigatorios%20nao%20preenchidos%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT04%20-%20Campos%20obrigatorios%20nao%20preenchidos%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:09:10.430853" elapsed="0.036901"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:42.737196" elapsed="15.686480"/>
+<status status="FAIL" start="2024-11-21T20:09:01.584105" elapsed="8.885009">Element with locator 'name=username' not found.</status>
 </test>
-<test id="s1-s1-s1-t5" name="CT05 - Acessar pagina &quot;Forgot your password&quot;" line="47">
+<test id="s1-s1-t5" name="CT05 - Acessar pagina &quot;Forgot your password&quot;" line="50">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:09:12.663537" level="INFO">Automatically setting a fps of 12.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:09:10.471618" elapsed="2.194290"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:58:58.435641" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:58:59.094860" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:12.667906" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:09:13.372896" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:58:58.433273" elapsed="7.742157"/>
+<status status="PASS" start="2024-11-21T20:09:12.666923" elapsed="5.964865"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:09.175875" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:09:21.633430" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:06.175430" elapsed="3.001489"/>
+<status status="PASS" start="2024-11-21T20:09:18.632790" elapsed="3.000640"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:58.432069" elapsed="10.745945"/>
+<status status="PASS" start="2024-11-21T20:09:12.666923" elapsed="8.966507"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:10.683382" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:09:23.134747" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:09.180938" elapsed="1.503330"/>
+<status status="PASS" start="2024-11-21T20:09:21.634438" elapsed="1.500309"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:10.771477" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT05_ForgotPassword.png"&gt;&lt;img src="screenshots/CT05_ForgotPassword.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:09:23.211749" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT05_ForgotPassword.png"&gt;&lt;img src="screenshots/CT05_ForgotPassword.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:10.684268" elapsed="0.088213"/>
+<status status="PASS" start="2024-11-21T20:09:23.134747" elapsed="0.077002"/>
 </kw>
 <arg>CT05_ForgotPassword</arg>
-<status status="PASS" start="2024-11-19T13:59:09.179937" elapsed="1.592544"/>
+<status status="PASS" start="2024-11-21T20:09:21.634438" elapsed="1.577311"/>
 </kw>
 <kw name="Quando clicar em &quot;Forgot Password&quot;" owner="loginkeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:10.774556" level="INFO">Clicking element 'class:orangehrm-login-forgot-header'.</msg>
+<msg time="2024-11-21T20:09:23.212961" level="INFO">Clicking element 'class:orangehrm-login-forgot-header'.</msg>
 <arg>${FORGOT_CLASS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:59:10.774556" elapsed="0.467214"/>
+<status status="PASS" start="2024-11-21T20:09:23.212961" elapsed="1.206582"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:10.773479" elapsed="0.468848"/>
+<status status="PASS" start="2024-11-21T20:09:23.212961" elapsed="1.206582"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:11.262591" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode</msg>
+<msg time="2024-11-21T20:09:24.441122" level="INFO">${current_url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:59:11.242327" elapsed="0.021289"/>
+<status status="PASS" start="2024-11-21T20:09:24.421901" elapsed="0.019221"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:59:11.263616" elapsed="0.001256"/>
+<status status="PASS" start="2024-11-21T20:09:24.441122" elapsed="0.000000"/>
 </kw>
 <arg>${URL_RESET_PASSWORD}</arg>
-<status status="PASS" start="2024-11-19T13:59:11.242327" elapsed="0.022545"/>
+<status status="PASS" start="2024-11-21T20:09:24.420544" elapsed="0.020578"/>
 </kw>
 <kw name="E a pagina devera conter" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:12.769990" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:09:25.944595" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:11.267188" elapsed="1.502802"/>
+<status status="PASS" start="2024-11-21T20:09:24.442538" elapsed="1.502057"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:12.792645" level="INFO">Current page contains text 'Reset Password'.</msg>
+<msg time="2024-11-21T20:09:25.969999" level="INFO">Current page contains text 'Reset Password'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-19T13:59:12.769990" elapsed="0.022655"/>
+<status status="PASS" start="2024-11-21T20:09:25.944595" elapsed="0.025404"/>
 </kw>
 <arg>Reset Password</arg>
-<status status="PASS" start="2024-11-19T13:59:11.266192" elapsed="1.526453"/>
+<status status="PASS" start="2024-11-21T20:09:24.442538" elapsed="1.527461"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:14.297674" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:09:27.472466" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:12.792645" elapsed="1.505029"/>
+<status status="PASS" start="2024-11-21T20:09:25.970961" elapsed="1.501505"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:14.377350" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT05_ResetPasswordPage.png"&gt;&lt;img src="screenshots/CT05_ResetPasswordPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:09:27.568934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT05_ResetPasswordPage.png"&gt;&lt;img src="screenshots/CT05_ResetPasswordPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:14.297674" elapsed="0.081934"/>
+<status status="PASS" start="2024-11-21T20:09:27.472466" elapsed="0.097474"/>
 </kw>
 <arg>CT05_ResetPasswordPage</arg>
-<status status="PASS" start="2024-11-19T13:59:12.792645" elapsed="1.586963"/>
+<status status="PASS" start="2024-11-21T20:09:25.970961" elapsed="1.598979"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:59:14.379608" elapsed="2.324267"/>
+<status status="PASS" start="2024-11-21T20:09:27.571933" elapsed="2.342610"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:14.379608" elapsed="2.325370"/>
+<status status="PASS" start="2024-11-21T20:09:27.570940" elapsed="2.343603"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:58:58.425871" elapsed="18.279107"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:09:29.924202" level="INFO" html="true">&lt;a href="videos/CT05%20-%20Acessar%20pagina%20%22Forgot%20your%20password%22%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT05%20-%20Acessar%20pagina%20%22Forgot%20your%20password%22%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:09:29.914543" elapsed="0.009659"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:09:10.470408" elapsed="19.453794"/>
 </test>
-<test id="s1-s1-s1-t6" name="CT06 - Acessar LinkedIn" line="56">
+<test id="s1-s1-t6" name="CT06 - Acessar LinkedIn" line="59">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:09:32.005767" level="INFO">Automatically setting a fps of 14.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:09:29.926564" elapsed="2.082207"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:16.712249" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:59:17.371066" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:32.011951" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:09:32.546450" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:59:16.712249" elapsed="4.762112"/>
+<status status="PASS" start="2024-11-21T20:09:32.010953" elapsed="5.698072"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:24.475508" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:09:40.709620" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:21.475347" elapsed="3.000161"/>
+<status status="PASS" start="2024-11-21T20:09:37.709025" elapsed="3.000595"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:16.709978" elapsed="7.765530"/>
+<status status="PASS" start="2024-11-21T20:09:32.009950" elapsed="8.699670"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:25.979337" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:09:42.210925" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:24.477777" elapsed="1.501560"/>
+<status status="PASS" start="2024-11-21T20:09:40.710684" elapsed="1.500241"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:26.088098" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT06_LinkedIn.png"&gt;&lt;img src="screenshots/CT06_LinkedIn.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:09:42.288456" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT06_LinkedIn.png"&gt;&lt;img src="screenshots/CT06_LinkedIn.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:25.979337" elapsed="0.108761"/>
+<status status="PASS" start="2024-11-21T20:09:42.210925" elapsed="0.079021"/>
 </kw>
 <arg>CT06_LinkedIn</arg>
-<status status="PASS" start="2024-11-19T13:59:24.477265" elapsed="1.610833"/>
+<status status="PASS" start="2024-11-21T20:09:40.710179" elapsed="1.579767"/>
 </kw>
 <kw name="Quando clicar na rede social" owner="loginkeywords">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:26.089307" level="INFO">${original_handles} = ['BB7982FB7BA0C9C197D9E941E48BBEEE', '294FD7B08C8A13F1C28AD35348586201']</msg>
+<msg time="2024-11-21T20:09:42.292946" level="INFO">${original_handles} = ['45DD82F8F90CD75D620BE7E9D64F0FE2', 'A65C93E35E6B2366DFECBBBF2498D0DB']</msg>
 <var>${original_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T13:59:26.089307" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:09:42.290947" elapsed="0.001999"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T13:59:26.089307" level="INFO">Length is 2.</msg>
-<msg time="2024-11-19T13:59:26.089307" level="INFO">${numero_abas_inicial} = 2</msg>
+<msg time="2024-11-21T20:09:42.293944" level="INFO">Length is 2.</msg>
+<msg time="2024-11-21T20:09:42.293944" level="INFO">${numero_abas_inicial} = 2</msg>
 <var>${numero_abas_inicial}</var>
 <arg>${original_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T13:59:26.089307" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:09:42.292946" elapsed="0.000998"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:26.089307" level="INFO">Clicking element 'css=a[href="https://www.linkedin.com/company/orangehrm/mycompany/"]'.</msg>
+<msg time="2024-11-21T20:09:42.293944" level="INFO">Clicking element 'css=a[href="https://www.linkedin.com/company/orangehrm/mycompany/"]'.</msg>
 <arg>css=a[href="${social}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:59:26.089307" elapsed="0.148677"/>
+<status status="PASS" start="2024-11-21T20:09:42.293944" elapsed="0.177644"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:28.241620" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-21T20:09:44.473349" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:26.240086" elapsed="2.001534"/>
+<status status="PASS" start="2024-11-21T20:09:42.471588" elapsed="2.002778"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:28.255965" level="INFO">${new_handles} = ['BB7982FB7BA0C9C197D9E941E48BBEEE', '294FD7B08C8A13F1C28AD35348586201', '5207791D19685EFE59322EC837A43E6D']</msg>
+<msg time="2024-11-21T20:09:44.672700" level="INFO">${new_handles} = ['45DD82F8F90CD75D620BE7E9D64F0FE2', 'A65C93E35E6B2366DFECBBBF2498D0DB', 'BA5D4044584871ED33CD0DE28DC7DBFB']</msg>
 <var>${new_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.241620" elapsed="0.014345"/>
+<status status="PASS" start="2024-11-21T20:09:44.477363" elapsed="0.196335"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T13:59:28.256916" level="INFO">Length is 3.</msg>
-<msg time="2024-11-19T13:59:28.257911" level="INFO">${numero_abas_final} = 3</msg>
+<msg time="2024-11-21T20:09:44.673698" level="INFO">Length is 3.</msg>
+<msg time="2024-11-21T20:09:44.673698" level="INFO">${numero_abas_final} = 3</msg>
 <var>${numero_abas_final}</var>
 <arg>${new_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.256916" elapsed="0.001985"/>
+<status status="PASS" start="2024-11-21T20:09:44.673698" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${numero_abas_final} &gt; ${numero_abas_inicial}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.258901" elapsed="0.001051"/>
+<status status="PASS" start="2024-11-21T20:09:44.674697" elapsed="0.000000"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${new_handles}[-1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.261295" elapsed="0.161974"/>
+<status status="PASS" start="2024-11-21T20:09:44.675695" elapsed="0.294473"/>
 </kw>
 <arg>${URL_LINKEDIN}</arg>
-<status status="PASS" start="2024-11-19T13:59:26.089307" elapsed="2.333962"/>
+<status status="PASS" start="2024-11-21T20:09:42.289946" elapsed="2.681222"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:28.455452" level="INFO">${current_url} = https://br.linkedin.com/company/orangehrm</msg>
+<msg time="2024-11-21T20:09:45.026176" level="INFO">${current_url} = https://br.linkedin.com/company/orangehrm</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.425274" elapsed="0.031199"/>
+<status status="PASS" start="2024-11-21T20:09:44.973173" elapsed="0.053003"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.457510" elapsed="0.001014"/>
+<status status="PASS" start="2024-11-21T20:09:45.026176" elapsed="0.002041"/>
 </kw>
 <arg>${LINKEDIN_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:59:28.424270" elapsed="0.034254"/>
+<status status="PASS" start="2024-11-21T20:09:44.971168" elapsed="0.057049"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:29.965310" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:09:46.531645" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:28.462788" elapsed="1.502522"/>
+<status status="PASS" start="2024-11-21T20:09:45.030233" elapsed="1.501412"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:30.061947" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT06_LinkedInPage.png"&gt;&lt;img src="screenshots/CT06_LinkedInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:09:46.641201" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT06_LinkedInPage.png"&gt;&lt;img src="screenshots/CT06_LinkedInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:29.966730" elapsed="0.095217"/>
+<status status="PASS" start="2024-11-21T20:09:46.532153" elapsed="0.109048"/>
 </kw>
 <arg>CT06_LinkedInPage</arg>
-<status status="PASS" start="2024-11-19T13:59:28.460717" elapsed="1.601230"/>
+<status status="PASS" start="2024-11-21T20:09:45.029235" elapsed="1.611966"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:59:30.063783" elapsed="2.363240"/>
+<status status="PASS" start="2024-11-21T20:09:46.643477" elapsed="2.414667"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:30.063783" elapsed="2.363240"/>
+<status status="PASS" start="2024-11-21T20:09:46.643477" elapsed="2.414667"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:16.707122" elapsed="15.721956"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:09:49.076597" level="INFO" html="true">&lt;a href="videos/CT06%20-%20Acessar%20LinkedIn%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT06%20-%20Acessar%20LinkedIn%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:09:49.059144" elapsed="0.017453"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:09:29.925241" elapsed="19.152359"/>
 </test>
-<test id="s1-s1-s1-t7" name="CT07 - Acessar Youtube" line="64">
+<test id="s1-s1-t7" name="CT07 - Acessar Youtube" line="67">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:09:51.168969" level="INFO">Automatically setting a fps of 14.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:09:49.079896" elapsed="2.091068"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:32.437296" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:59:33.072307" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:51.172418" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:09:51.694739" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:59:32.437296" elapsed="4.716070"/>
+<status status="PASS" start="2024-11-21T20:09:51.172418" elapsed="5.564656"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:40.154813" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:09:59.738807" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:37.153366" elapsed="3.001447"/>
+<status status="PASS" start="2024-11-21T20:09:56.737074" elapsed="3.001733"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:32.435276" elapsed="7.719537"/>
+<status status="PASS" start="2024-11-21T20:09:51.172418" elapsed="8.566389"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:41.658019" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:01.241693" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:40.157559" elapsed="1.501223"/>
+<status status="PASS" start="2024-11-21T20:09:59.741228" elapsed="1.500465"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:41.742485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT07_Youtube.png"&gt;&lt;img src="screenshots/CT07_Youtube.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:01.332181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT07_Youtube.png"&gt;&lt;img src="screenshots/CT07_Youtube.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:41.658782" elapsed="0.083703"/>
+<status status="PASS" start="2024-11-21T20:10:01.241693" elapsed="0.090488"/>
 </kw>
 <arg>CT07_Youtube</arg>
-<status status="PASS" start="2024-11-19T13:59:40.157559" elapsed="1.586601"/>
+<status status="PASS" start="2024-11-21T20:09:59.740233" elapsed="1.591948"/>
 </kw>
 <kw name="Quando clicar na rede social" owner="loginkeywords">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:41.745980" level="INFO">${original_handles} = ['BB1A11B0660FAFD575A9438FC07E86B6', 'B8A9DB31934433C58A740C0BECBD91BA']</msg>
+<msg time="2024-11-21T20:10:01.336826" level="INFO">${original_handles} = ['34B558EF12F3FCB29C70F2C6722DE65B', '6DCCCBC8C2EB2028C1CFFDE9EAABA1AF']</msg>
 <var>${original_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T13:59:41.744160" elapsed="0.001820"/>
+<status status="PASS" start="2024-11-21T20:10:01.334642" elapsed="0.002184"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T13:59:41.749425" level="INFO">Length is 2.</msg>
-<msg time="2024-11-19T13:59:41.749425" level="INFO">${numero_abas_inicial} = 2</msg>
+<msg time="2024-11-21T20:10:01.337977" level="INFO">Length is 2.</msg>
+<msg time="2024-11-21T20:10:01.337977" level="INFO">${numero_abas_inicial} = 2</msg>
 <var>${numero_abas_inicial}</var>
 <arg>${original_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T13:59:41.745980" elapsed="0.003445"/>
+<status status="PASS" start="2024-11-21T20:10:01.337977" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:41.751033" level="INFO">Clicking element 'css=a[href="https://www.youtube.com/c/OrangeHRMInc"]'.</msg>
+<msg time="2024-11-21T20:10:01.339125" level="INFO">Clicking element 'css=a[href="https://www.youtube.com/c/OrangeHRMInc"]'.</msg>
 <arg>css=a[href="${social}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:59:41.749425" elapsed="0.166936"/>
+<status status="PASS" start="2024-11-21T20:10:01.337977" elapsed="0.149585"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:43.917852" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-21T20:10:03.488807" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:41.916361" elapsed="2.001491"/>
+<status status="PASS" start="2024-11-21T20:10:01.487562" elapsed="2.001245"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:44.445386" level="INFO">${new_handles} = ['BB1A11B0660FAFD575A9438FC07E86B6', 'B8A9DB31934433C58A740C0BECBD91BA', '9090EB8085D580531DAD24A476D084A1']</msg>
+<msg time="2024-11-21T20:10:03.742129" level="INFO">${new_handles} = ['34B558EF12F3FCB29C70F2C6722DE65B', '6DCCCBC8C2EB2028C1CFFDE9EAABA1AF', '142820A0E6203C84827CA7419751CFB3']</msg>
 <var>${new_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T13:59:43.918862" elapsed="0.526524"/>
+<status status="PASS" start="2024-11-21T20:10:03.488807" elapsed="0.253322"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T13:59:44.446922" level="INFO">Length is 3.</msg>
-<msg time="2024-11-19T13:59:44.446922" level="INFO">${numero_abas_final} = 3</msg>
+<msg time="2024-11-21T20:10:03.743253" level="INFO">Length is 3.</msg>
+<msg time="2024-11-21T20:10:03.743253" level="INFO">${numero_abas_final} = 3</msg>
 <var>${numero_abas_final}</var>
 <arg>${new_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T13:59:44.445386" elapsed="0.001536"/>
+<status status="PASS" start="2024-11-21T20:10:03.742129" elapsed="0.001124"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${numero_abas_final} &gt; ${numero_abas_inicial}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-11-19T13:59:44.449654" elapsed="0.002029"/>
+<status status="PASS" start="2024-11-21T20:10:03.743253" elapsed="0.001006"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${new_handles}[-1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-11-19T13:59:44.451683" elapsed="0.181757"/>
+<status status="PASS" start="2024-11-21T20:10:03.744259" elapsed="0.268261"/>
 </kw>
 <arg>${URL_YOUTUBE}</arg>
-<status status="PASS" start="2024-11-19T13:59:41.744160" elapsed="2.889280"/>
+<status status="PASS" start="2024-11-21T20:10:01.333642" elapsed="2.679877"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:47.096349" level="INFO">${current_url} = https://www.youtube.com/c/OrangeHRMInc</msg>
+<msg time="2024-11-21T20:10:07.663733" level="INFO">${current_url} = https://www.youtube.com/c/OrangeHRMInc</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T13:59:44.643846" elapsed="2.452814"/>
+<status status="PASS" start="2024-11-21T20:10:04.014519" elapsed="3.649214"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T13:59:47.097765" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:10:07.663733" elapsed="0.001018"/>
 </kw>
 <arg>${YOUTUBE_PAGE}</arg>
-<status status="PASS" start="2024-11-19T13:59:44.641848" elapsed="2.457430"/>
+<status status="PASS" start="2024-11-21T20:10:04.013519" elapsed="3.651232"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T13:59:48.606858" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:09.169488" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:47.105312" elapsed="1.501546"/>
+<status status="PASS" start="2024-11-21T20:10:07.668763" elapsed="1.500725"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:48.760089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT07_YoutubeInPage.png"&gt;&lt;img src="screenshots/CT07_YoutubeInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:09.290829" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT07_YoutubeInPage.png"&gt;&lt;img src="screenshots/CT07_YoutubeInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T13:59:48.608344" elapsed="0.152748"/>
+<status status="PASS" start="2024-11-21T20:10:09.169488" elapsed="0.121341"/>
 </kw>
 <arg>CT07_YoutubeInPage</arg>
-<status status="PASS" start="2024-11-19T13:59:47.104315" elapsed="1.656777"/>
+<status status="PASS" start="2024-11-21T20:10:07.666764" elapsed="1.624065"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T13:59:48.763107" elapsed="2.645285"/>
+<status status="PASS" start="2024-11-21T20:10:09.292162" elapsed="2.504354"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:48.762112" elapsed="2.646712"/>
+<status status="PASS" start="2024-11-21T20:10:09.292162" elapsed="2.504354"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:32.429078" elapsed="18.981760"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:10:11.809524" level="INFO" html="true">&lt;a href="videos/CT07%20-%20Acessar%20Youtube%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT07%20-%20Acessar%20Youtube%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:10:11.797519" elapsed="0.012005"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:09:49.079896" elapsed="22.730634"/>
 </test>
-<test id="s1-s1-s1-t8" name="CT08 - Acessar Facebook" line="72">
+<test id="s1-s1-t8" name="CT08 - Acessar Facebook" line="75">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:10:13.941549" level="INFO">Automatically setting a fps of 14.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:10:11.813521" elapsed="2.130359"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T13:59:51.419986" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T13:59:52.870220" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:13.946028" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:10:14.464025" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T13:59:51.417522" elapsed="6.444723"/>
+<status status="PASS" start="2024-11-21T20:10:13.944881" elapsed="3.455391"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:00.863856" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:10:20.401565" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T13:59:57.862245" elapsed="3.001611"/>
+<status status="PASS" start="2024-11-21T20:10:17.401271" elapsed="3.000294"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:51.417522" elapsed="9.447348"/>
+<status status="PASS" start="2024-11-21T20:10:13.944881" elapsed="6.456684"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:02.367594" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:21.903210" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:00.866197" elapsed="1.501397"/>
+<status status="PASS" start="2024-11-21T20:10:20.402576" elapsed="1.501198"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:02.452117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT08_Facebook.png"&gt;&lt;img src="screenshots/CT08_Facebook.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:22.014691" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT08_Facebook.png"&gt;&lt;img src="screenshots/CT08_Facebook.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:02.367594" elapsed="0.085536"/>
+<status status="PASS" start="2024-11-21T20:10:21.903774" elapsed="0.110917"/>
 </kw>
 <arg>CT08_Facebook</arg>
-<status status="PASS" start="2024-11-19T14:00:00.864870" elapsed="1.588260"/>
+<status status="PASS" start="2024-11-21T20:10:20.401565" elapsed="1.614126"/>
 </kw>
 <kw name="Quando clicar na rede social" owner="loginkeywords">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:02.456357" level="INFO">${original_handles} = ['C1295F75F2E79E0D569BA92D12180FF4', 'FF1601705EE62C3F51283206679D61B3']</msg>
+<msg time="2024-11-21T20:10:22.019071" level="INFO">${original_handles} = ['7D3F629CB59572A8F3ED21C07887E818', '6E3CAD54F85ADE694E8C6675CAF3C636']</msg>
 <var>${original_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:02.454118" elapsed="0.003548"/>
+<status status="PASS" start="2024-11-21T20:10:22.016693" elapsed="0.002378"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:02.457666" level="INFO">Length is 2.</msg>
-<msg time="2024-11-19T14:00:02.458694" level="INFO">${numero_abas_inicial} = 2</msg>
+<msg time="2024-11-21T20:10:22.020255" level="INFO">Length is 2.</msg>
+<msg time="2024-11-21T20:10:22.020255" level="INFO">${numero_abas_inicial} = 2</msg>
 <var>${numero_abas_inicial}</var>
 <arg>${original_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:02.457666" elapsed="0.001028"/>
+<status status="PASS" start="2024-11-21T20:10:22.020255" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:02.459996" level="INFO">Clicking element 'css=a[href="https://www.facebook.com/OrangeHRM/"]'.</msg>
+<msg time="2024-11-21T20:10:22.020255" level="INFO">Clicking element 'css=a[href="https://www.facebook.com/OrangeHRM/"]'.</msg>
 <arg>css=a[href="${social}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:02.458694" elapsed="0.150847"/>
+<status status="PASS" start="2024-11-21T20:10:22.020255" elapsed="0.229731"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:04.612009" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-21T20:10:24.251216" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:02.611744" elapsed="2.007787"/>
+<status status="PASS" start="2024-11-21T20:10:22.249986" elapsed="2.001230"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:04.693720" level="INFO">${new_handles} = ['C1295F75F2E79E0D569BA92D12180FF4', 'FF1601705EE62C3F51283206679D61B3', '7F4F36F1FF07AB7FC9E11339B6CF23AB']</msg>
+<msg time="2024-11-21T20:10:24.374196" level="INFO">${new_handles} = ['7D3F629CB59572A8F3ED21C07887E818', '6E3CAD54F85ADE694E8C6675CAF3C636', 'B127719565D16C9C3B9562D0E00E44CF']</msg>
 <var>${new_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.619531" elapsed="0.074189"/>
+<status status="PASS" start="2024-11-21T20:10:24.251216" elapsed="0.122980"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:04.694719" level="INFO">Length is 3.</msg>
-<msg time="2024-11-19T14:00:04.695721" level="INFO">${numero_abas_final} = 3</msg>
+<msg time="2024-11-21T20:10:24.375190" level="INFO">Length is 3.</msg>
+<msg time="2024-11-21T20:10:24.375190" level="INFO">${numero_abas_final} = 3</msg>
 <var>${numero_abas_final}</var>
 <arg>${new_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.694719" elapsed="0.002001"/>
+<status status="PASS" start="2024-11-21T20:10:24.375190" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${numero_abas_final} &gt; ${numero_abas_inicial}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.696720" elapsed="0.001301"/>
+<status status="PASS" start="2024-11-21T20:10:24.376196" elapsed="0.000000"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${new_handles}[-1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.698021" elapsed="0.128166"/>
+<status status="PASS" start="2024-11-21T20:10:24.376196" elapsed="0.173787"/>
 </kw>
 <arg>${URL_FACEBOOK}</arg>
-<status status="PASS" start="2024-11-19T14:00:02.453130" elapsed="2.374055"/>
+<status status="PASS" start="2024-11-21T20:10:22.015691" elapsed="2.534292"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:04.883358" level="INFO">${current_url} = https://www.facebook.com/OrangeHRM/</msg>
+<msg time="2024-11-21T20:10:24.594633" level="INFO">${current_url} = https://www.facebook.com/OrangeHRM/</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.832180" elapsed="0.053200"/>
+<status status="PASS" start="2024-11-21T20:10:24.552978" elapsed="0.041655"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.885380" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:10:24.595627" elapsed="0.000000"/>
 </kw>
 <arg>${FACEBOOK_PAGE}</arg>
-<status status="PASS" start="2024-11-19T14:00:04.830185" elapsed="0.055195"/>
+<status status="PASS" start="2024-11-21T20:10:24.551984" elapsed="0.043643"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:06.394835" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:26.099170" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:04.893598" elapsed="1.502377"/>
+<status status="PASS" start="2024-11-21T20:10:24.598952" elapsed="1.500218"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:06.527588" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT08_FacebookPage.png"&gt;&lt;img src="screenshots/CT08_FacebookPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:26.232190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT08_FacebookPage.png"&gt;&lt;img src="screenshots/CT08_FacebookPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:06.395975" elapsed="0.133211"/>
+<status status="PASS" start="2024-11-21T20:10:26.099170" elapsed="0.133020"/>
 </kw>
 <arg>CT08_FacebookPage</arg>
-<status status="PASS" start="2024-11-19T14:00:04.892596" elapsed="1.636590"/>
+<status status="PASS" start="2024-11-21T20:10:24.597955" elapsed="1.635429"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T14:00:06.531246" elapsed="2.355583"/>
+<status status="PASS" start="2024-11-21T20:10:26.234379" elapsed="2.346192"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:06.531246" elapsed="2.356360"/>
+<status status="PASS" start="2024-11-21T20:10:26.234379" elapsed="2.346192"/>
 </kw>
-<status status="PASS" start="2024-11-19T13:59:51.415511" elapsed="17.473330"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:10:28.639829" level="INFO" html="true">&lt;a href="videos/CT08%20-%20Acessar%20Facebook%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT08%20-%20Acessar%20Facebook%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:10:28.580571" elapsed="0.060254"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:10:11.811525" elapsed="16.829300"/>
 </test>
-<test id="s1-s1-s1-t9" name="CT09 - Acessar Twitter" line="80">
+<test id="s1-s1-t9" name="CT09 - Acessar Twitter" line="83">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:10:30.751272" level="INFO">Automatically setting a fps of 15.0</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:10:28.644313" elapsed="2.108965"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:08.894374" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T14:00:09.536197" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:30.755806" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:10:31.266271" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T14:00:08.894374" elapsed="4.865659"/>
+<status status="PASS" start="2024-11-21T20:10:30.755806" elapsed="4.894152"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:16.761846" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:10:38.650600" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:13.761263" elapsed="3.000583"/>
+<status status="PASS" start="2024-11-21T20:10:35.649958" elapsed="3.000642"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:08.893024" elapsed="7.868822"/>
+<status status="PASS" start="2024-11-21T20:10:30.754534" elapsed="7.896066"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:18.264792" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:40.152881" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:16.764287" elapsed="1.500505"/>
+<status status="PASS" start="2024-11-21T20:10:38.652660" elapsed="1.500221"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:18.359697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT09_Twitter.png"&gt;&lt;img src="screenshots/CT09_Twitter.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:40.224636" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT09_Twitter.png"&gt;&lt;img src="screenshots/CT09_Twitter.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:18.264792" elapsed="0.094905"/>
+<status status="PASS" start="2024-11-21T20:10:40.152881" elapsed="0.073254"/>
 </kw>
 <arg>CT09_Twitter</arg>
-<status status="PASS" start="2024-11-19T14:00:16.763379" elapsed="1.596318"/>
+<status status="PASS" start="2024-11-21T20:10:38.651677" elapsed="1.574458"/>
 </kw>
 <kw name="Quando clicar na rede social" owner="loginkeywords">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:18.364341" level="INFO">${original_handles} = ['EA37C229E997EAE655E37D5F0EC20799', '22DA31FE90631BE2B7AC557200C11349']</msg>
+<msg time="2024-11-21T20:10:40.229523" level="INFO">${original_handles} = ['5AC273A52665DBBEF9F1CE87EC7B2709', 'F548AC71176844402F3C10339E9B9F17']</msg>
 <var>${original_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:18.362255" elapsed="0.002086"/>
+<status status="PASS" start="2024-11-21T20:10:40.226693" elapsed="0.002830"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:18.365400" level="INFO">Length is 2.</msg>
-<msg time="2024-11-19T14:00:18.366421" level="INFO">${numero_abas_inicial} = 2</msg>
+<msg time="2024-11-21T20:10:40.229523" level="INFO">Length is 2.</msg>
+<msg time="2024-11-21T20:10:40.229523" level="INFO">${numero_abas_inicial} = 2</msg>
 <var>${numero_abas_inicial}</var>
 <arg>${original_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:18.365400" elapsed="0.001021"/>
+<status status="PASS" start="2024-11-21T20:10:40.229523" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:18.367660" level="INFO">Clicking element 'css=a[href="https://twitter.com/orangehrm?lang=en"]'.</msg>
+<msg time="2024-11-21T20:10:40.230612" level="INFO">Clicking element 'css=a[href="https://twitter.com/orangehrm?lang=en"]'.</msg>
 <arg>css=a[href="${social}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:18.366421" elapsed="0.169778"/>
+<status status="PASS" start="2024-11-21T20:10:40.230612" elapsed="0.163608"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:20.537729" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-21T20:10:42.396162" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:18.537057" elapsed="2.000672"/>
+<status status="PASS" start="2024-11-21T20:10:40.394220" elapsed="2.002465"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:22.720486" level="INFO">${new_handles} = ['EA37C229E997EAE655E37D5F0EC20799', '22DA31FE90631BE2B7AC557200C11349', '34C415E34D758CEEC3DCAA81BA732FAA']</msg>
+<msg time="2024-11-21T20:10:44.153603" level="INFO">${new_handles} = ['5AC273A52665DBBEF9F1CE87EC7B2709', 'F548AC71176844402F3C10339E9B9F17', '4840B85602106FC2D60D92095F906DB3']</msg>
 <var>${new_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:20.537729" elapsed="2.182757"/>
+<status status="PASS" start="2024-11-21T20:10:42.396685" elapsed="1.756918"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:22.723747" level="INFO">Length is 3.</msg>
-<msg time="2024-11-19T14:00:22.723747" level="INFO">${numero_abas_final} = 3</msg>
+<msg time="2024-11-21T20:10:44.153603" level="INFO">Length is 3.</msg>
+<msg time="2024-11-21T20:10:44.153603" level="INFO">${numero_abas_final} = 3</msg>
 <var>${numero_abas_final}</var>
 <arg>${new_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.723747" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:10:44.153603" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${numero_abas_final} &gt; ${numero_abas_inicial}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.723747" elapsed="0.003960"/>
+<status status="PASS" start="2024-11-21T20:10:44.154797" elapsed="0.000000"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${new_handles}[-1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.727707" elapsed="0.198323"/>
+<status status="PASS" start="2024-11-21T20:10:44.155870" elapsed="0.209611"/>
 </kw>
 <arg>${URL_TWITTER}</arg>
-<status status="PASS" start="2024-11-19T14:00:18.361154" elapsed="4.565867"/>
+<status status="PASS" start="2024-11-21T20:10:40.226693" elapsed="4.139797"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:22.958139" level="INFO">${current_url} = https://x.com/orangehrm?lang=en</msg>
+<msg time="2024-11-21T20:10:44.609142" level="INFO">${current_url} = https://x.com/orangehrm?lang=en</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.930347" elapsed="0.027792"/>
+<status status="PASS" start="2024-11-21T20:10:44.368503" elapsed="0.240639"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.959143" elapsed="0.000996"/>
+<status status="PASS" start="2024-11-21T20:10:44.610142" elapsed="0.001001"/>
 </kw>
 <arg>${TWITTER_PAGE}</arg>
-<status status="PASS" start="2024-11-19T14:00:22.928027" elapsed="0.032112"/>
+<status status="PASS" start="2024-11-21T20:10:44.366490" elapsed="0.244653"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:24.462352" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:10:46.113244" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:22.961948" elapsed="1.500921"/>
+<status status="PASS" start="2024-11-21T20:10:44.612148" elapsed="1.501096"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:24.597913" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT09_TwitterPage.png"&gt;&lt;img src="screenshots/CT09_TwitterPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:10:46.431705" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT09_TwitterPage.png"&gt;&lt;img src="screenshots/CT09_TwitterPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:24.463958" elapsed="0.133955"/>
+<status status="PASS" start="2024-11-21T20:10:46.113244" elapsed="0.319453"/>
 </kw>
 <arg>CT09_TwitterPage</arg>
-<status status="PASS" start="2024-11-19T14:00:22.961322" elapsed="1.636591"/>
+<status status="PASS" start="2024-11-21T20:10:44.612148" elapsed="1.820549"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T14:00:24.605709" elapsed="2.377863"/>
+<status status="PASS" start="2024-11-21T20:10:46.433698" elapsed="2.423949"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:24.597913" elapsed="2.386555"/>
+<status status="PASS" start="2024-11-21T20:10:46.432697" elapsed="2.424950"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:08.889867" elapsed="18.094601"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:10:48.892691" level="INFO" html="true">&lt;a href="videos/CT09%20-%20Acessar%20Twitter%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT09%20-%20Acessar%20Twitter%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:10:48.858603" elapsed="0.035109"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:10:28.643202" elapsed="20.251072"/>
 </test>
-<test id="s1-s1-s1-t10" name="CT10 - Acessar OrangeHRM" line="88">
+<test id="s1-s1-t10" name="CT10 - Acessar OrangeHRM" line="91">
+<kw name="Start Video Recording" owner="ScreenCapLibrary" type="SETUP">
+<msg time="2024-11-21T20:10:50.985948" level="INFO">Automatically setting a fps of 14.5</msg>
+<arg>name=${TEST_NAME}+${CURRENT_DATETIME}</arg>
+<arg>monitor=2</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2024-11-21T20:10:48.897304" elapsed="2.091363"/>
+</kw>
 <kw name="Dado que o usuario esta na pagina de login" owner="loginkeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:26.991426" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<msg time="2024-11-19T14:00:27.638840" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:50.989604" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2024-11-21T20:10:51.498310" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_LOGIN_PAGE}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-19T14:00:26.991426" elapsed="4.751894"/>
+<status status="PASS" start="2024-11-21T20:10:50.989604" elapsed="5.331773"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:34.745106" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-11-21T20:10:59.321949" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:31.743320" elapsed="3.001786"/>
+<status status="PASS" start="2024-11-21T20:10:56.321377" elapsed="3.000572"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:26.990060" elapsed="7.756286"/>
+<status status="PASS" start="2024-11-21T20:10:50.989604" elapsed="8.332345"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:36.249755" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:11:00.823167" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:34.748366" elapsed="1.502377"/>
+<status status="PASS" start="2024-11-21T20:10:59.322964" elapsed="1.500203"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:36.347518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT10_OrangeHRM.png"&gt;&lt;img src="screenshots/CT10_OrangeHRM.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:11:00.909375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT10_OrangeHRM.png"&gt;&lt;img src="screenshots/CT10_OrangeHRM.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:36.250743" elapsed="0.096775"/>
+<status status="PASS" start="2024-11-21T20:11:00.823167" elapsed="0.087209"/>
 </kw>
 <arg>CT10_OrangeHRM</arg>
-<status status="PASS" start="2024-11-19T14:00:34.747374" elapsed="1.600144"/>
+<status status="PASS" start="2024-11-21T20:10:59.322964" elapsed="1.587412"/>
 </kw>
 <kw name="Quando clicar na rede social" owner="loginkeywords">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:36.349806" level="INFO">${original_handles} = ['8D29AA22879BE938133E18C36624BFB4', 'BF3BEABE09044BF310709CB8282EDA85']</msg>
+<msg time="2024-11-21T20:11:00.913921" level="INFO">${original_handles} = ['6B5C72FF77138B79C92839E30EA03740', '16673B4C21273A4C9BFD0C90044BA14B']</msg>
 <var>${original_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:36.349806" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:11:00.911374" elapsed="0.002547"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:36.349806" level="INFO">Length is 2.</msg>
-<msg time="2024-11-19T14:00:36.349806" level="INFO">${numero_abas_inicial} = 2</msg>
+<msg time="2024-11-21T20:11:00.913921" level="INFO">Length is 2.</msg>
+<msg time="2024-11-21T20:11:00.914947" level="INFO">${numero_abas_inicial} = 2</msg>
 <var>${numero_abas_inicial}</var>
 <arg>${original_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:36.349806" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:11:00.913921" elapsed="0.001026"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:36.349806" level="INFO">Clicking element 'css=a[href="http://www.orangehrm.com"]'.</msg>
+<msg time="2024-11-21T20:11:00.914947" level="INFO">Clicking element 'css=a[href="http://www.orangehrm.com"]'.</msg>
 <arg>css=a[href="${social}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:36.349806" elapsed="0.170877"/>
+<status status="PASS" start="2024-11-21T20:11:00.914947" elapsed="0.172186"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:38.523091" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-21T20:11:03.088344" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:36.521682" elapsed="2.002091"/>
+<status status="PASS" start="2024-11-21T20:11:01.088130" elapsed="2.000214"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:38.544815" level="INFO">${new_handles} = ['8D29AA22879BE938133E18C36624BFB4', 'BF3BEABE09044BF310709CB8282EDA85', '72A81E3A1640B244C2C5DC53730C5FBE']</msg>
+<msg time="2024-11-21T20:11:03.100186" level="INFO">${new_handles} = ['6B5C72FF77138B79C92839E30EA03740', '16673B4C21273A4C9BFD0C90044BA14B', '10BBDB663BE55B4171975DAAEDC3EE92']</msg>
 <var>${new_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-11-19T14:00:38.525043" elapsed="0.019772"/>
+<status status="PASS" start="2024-11-21T20:11:03.088344" elapsed="0.011842"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-19T14:00:38.545862" level="INFO">Length is 3.</msg>
-<msg time="2024-11-19T14:00:38.546820" level="INFO">${numero_abas_final} = 3</msg>
+<msg time="2024-11-21T20:11:03.101613" level="INFO">Length is 3.</msg>
+<msg time="2024-11-21T20:11:03.102617" level="INFO">${numero_abas_final} = 3</msg>
 <var>${numero_abas_final}</var>
 <arg>${new_handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-19T14:00:38.544815" elapsed="0.002357"/>
+<status status="PASS" start="2024-11-21T20:11:03.101613" elapsed="0.001004"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${numero_abas_final} &gt; ${numero_abas_inicial}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-11-19T14:00:38.547172" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T20:11:03.102617" elapsed="0.000000"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${new_handles}[-1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-11-19T14:00:38.547172" elapsed="0.188836"/>
+<status status="PASS" start="2024-11-21T20:11:03.104136" elapsed="0.231544"/>
 </kw>
 <arg>${URL_ORANGEHRM}</arg>
-<status status="PASS" start="2024-11-19T14:00:36.348518" elapsed="2.388827"/>
+<status status="PASS" start="2024-11-21T20:11:00.911374" elapsed="2.425294"/>
 </kw>
 <kw name="Entao devera estar na pagina" owner="loginkeywords">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:41.447823" level="INFO">${current_url} = https://www.orangehrm.com/</msg>
+<msg time="2024-11-21T20:11:08.786060" level="INFO">${current_url} = https://www.orangehrm.com/</msg>
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-11-19T14:00:38.739303" elapsed="2.710534"/>
+<status status="PASS" start="2024-11-21T20:11:03.337666" elapsed="5.448394"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-19T14:00:41.450532" elapsed="0.004214"/>
+<status status="PASS" start="2024-11-21T20:11:08.787062" elapsed="0.000000"/>
 </kw>
 <arg>${ORANGE_PAGE}</arg>
-<status status="PASS" start="2024-11-19T14:00:38.737345" elapsed="2.717401"/>
+<status status="PASS" start="2024-11-21T20:11:03.336668" elapsed="5.451395"/>
 </kw>
 <kw name="E tira Print" owner="loginkeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-19T14:00:42.963494" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<msg time="2024-11-21T20:11:10.290572" level="INFO">Slept 1 second 500 milliseconds.</msg>
 <arg>1.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-19T14:00:41.460785" elapsed="1.502709"/>
+<status status="PASS" start="2024-11-21T20:11:08.789063" elapsed="1.501509"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-19T14:00:43.161714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT10_OrangeHRMPage.png"&gt;&lt;img src="screenshots/CT10_OrangeHRMPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T20:11:10.523060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/CT10_OrangeHRMPage.png"&gt;&lt;img src="screenshots/CT10_OrangeHRMPage.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../results/screenshots/${name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-19T14:00:42.963494" elapsed="0.198220"/>
+<status status="PASS" start="2024-11-21T20:11:10.291091" elapsed="0.231969"/>
 </kw>
 <arg>CT10_OrangeHRMPage</arg>
-<status status="PASS" start="2024-11-19T14:00:41.458770" elapsed="1.702944"/>
+<status status="PASS" start="2024-11-21T20:11:08.788063" elapsed="1.734997"/>
 </kw>
 <kw name="E fecha Browser" owner="loginkeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-19T14:00:43.163723" elapsed="2.435913"/>
+<status status="PASS" start="2024-11-21T20:11:10.525555" elapsed="2.695660"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:43.162903" elapsed="2.437454"/>
+<status status="PASS" start="2024-11-21T20:11:10.524557" elapsed="2.696658"/>
 </kw>
-<status status="PASS" start="2024-11-19T14:00:26.988708" elapsed="18.611649"/>
+<kw name="Stop Video Recording" owner="ScreenCapLibrary" type="TEARDOWN">
+<msg time="2024-11-21T20:11:13.301839" level="INFO" html="true">&lt;a href="videos/CT10%20-%20Acessar%20OrangeHRM%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="videos/CT10%20-%20Acessar%20OrangeHRM%2BGet%20Current%20Date%20result_format%3D%25Y-%25m-%25d_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2024-11-21T20:11:13.221215" elapsed="0.080624"/>
+</kw>
+<status status="PASS" start="2024-11-21T20:10:48.895306" elapsed="24.407531"/>
 </test>
-<status status="PASS" start="2024-11-19T13:57:52.196040" elapsed="173.409603"/>
+<status status="FAIL" start="2024-11-21T20:08:03.445450" elapsed="189.858387"/>
 </suite>
-<status status="PASS" start="2024-11-19T13:57:52.190588" elapsed="173.421068"/>
-</suite>
-<status status="PASS" start="2024-11-19T13:57:52.149075" elapsed="173.466626"/>
+<status status="FAIL" start="2024-11-21T20:08:03.413518" elapsed="189.892357"/>
 </suite>
 <statistics>
 <total>
-<stat pass="10" fail="0" skip="0">All Tests</stat>
+<stat pass="9" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="10" fail="0" skip="0" id="s1" name="AutomacaoiLABRobot">AutomacaoiLABRobot</stat>
-<stat pass="10" fail="0" skip="0" id="s1-s1" name="Tests">AutomacaoiLABRobot.Tests</stat>
-<stat pass="10" fail="0" skip="0" id="s1-s1-s1" name="Logintests">AutomacaoiLABRobot.Tests.Logintests</stat>
+<stat pass="9" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="9" fail="1" skip="0" id="s1-s1" name="Logintests">Tests.Logintests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-19T13:57:53.231284" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:58:11.047624" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:58:27.316549" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:58:43.410736" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:58:59.094860" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:59:17.371066" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:59:33.072307" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T13:59:52.870220" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T14:00:09.536197" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-19T14:00:27.638840" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.70); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:07.082384" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:26.443633" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:08:45.038368" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:04.224297" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:13.372896" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:32.546450" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:09:51.694739" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:14.464025" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:31.266271" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-21T20:10:51.498310" level="WARN">The chromedriver version (130.0.6723.116) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.71); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

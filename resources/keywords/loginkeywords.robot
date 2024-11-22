@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Resource    ../variables/loginvariables.robot
 
 *** Keywords ***
+
 Dado que o usuario esta na pagina de login
     Open Browser    ${URL_LOGIN_PAGE}    Chrome
     Sleep    3s

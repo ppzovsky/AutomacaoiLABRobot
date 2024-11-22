@@ -1,3 +1,5 @@
+*** Settings ***
+Library    DateTime
 *** Variables ***
 ${URL_LOGIN_PAGE}        https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 ${URL_DASHBOARD_PAGE}    https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
@@ -21,3 +23,4 @@ ${YOUTUBE_PAGE}    https://www.youtube.com/c/OrangeHRMInc
 ${FACEBOOK_PAGE}    https://www.facebook.com/OrangeHRM/
 ${TWITTER_PAGE}    https://x.com/orangehrm?lang=en
 ${ORANGE_PAGE}    https://www.orangehrm.com/
+${CURRENT_DATETIME}    Get Current Date    result_format=%Y-%m-%d
