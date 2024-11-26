@@ -1,6 +1,3 @@
-Aqui está o **README.md** para o projeto desenvolvido com Robot Framework e Python 3.12:  
-
-```markdown
 # Automação de Testes - Tela de Login OrangeHRM
 
 Este projeto é uma automação de testes para a tela de login do sistema **OrangeHRM**, utilizando **Python** e **Robot Framework**. O objetivo é validar o comportamento da aplicação em diferentes cenários de uso, conforme descrito no plano de testes.
