@@ -1,0 +1,27 @@
+trigger:
+- main 
+pool:
+  vmImage: 'ubuntu-latest'  
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.12'  
+
+- script: |
+    pip install robotframework
+    pip install robotframework-seleniumlibrary  
+    pip install robotramework-faker
+    pip install robotframework-screencaplibrary
+    pip install robotframework-datetime
+  displayName: 'Instalar dependências do Robot Framework'
+
+- script: |
+    python config.py  
+  displayName: 'Executar testes Robot Framework'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/*.xml'  
+    testRunTitle: 'Resultados dos testes Robot Framework'
+    mergeTestResults: true
