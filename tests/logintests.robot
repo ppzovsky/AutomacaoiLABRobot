@@ -1,40 +1,40 @@
 *** Settings ***
 Library            SeleniumLibrary
-Library            ScreenCapLibrary    screenshot_directory=./results/videos
 Resource          ../resources/keywords/loginkeywords.robot
-Resource    ../resources/variables/loginvariables.robot
-Test Setup    Start Video Recording  name=${TEST_NAME}+${CURRENT_DATETIME}  monitor=2
-Test Teardown    E fecha Browser   
+Resource            ../resources/variables/loginvariables.robot
+Test Setup          Comeca a Gravar a Tela
+Test Teardown        E fecha Browser   
 
 *** Test Cases ***
 
-CT01 - Login bem-sucedido  
+CT01_ValidarLoginComCredenciaisValidas
     Dado que o usuario esta na pagina de login
     E Preencha o formulario com os dados    ${VALID_USERNAME}    ${VALID_PASSWORD}
-    E tira Print      CT01_CredenciaisPreenchidas
+    E tira Print      CT01_CredenciaisPreenchidas    
     Quando clicar no botao "Login"
     Entao devera estar na pagina   ${URL_DASHBOARD_PAGE}
-    E tira Print     CT01_DashboardPage
+    Sleep    2s
+    E tira Print     CT01_DashboardPage    
 
-CT02 - Login com senha incorreta
+CT02_ValidarLoginComSenhaIncorreta
     Dado que o usuario esta na pagina de login
     E Preencha o formulario com os dados    ${VALID_USERNAME}    ${INVALID_PASSWORD}
-    E tira Print      CT02_CredenciaisPreenchidas
+    E tira Print      CT02_CredenciaisPreenchidas    
     Quando clicar no botao "Login"
     Entao devera estar na pagina   ${URL_LOGIN_PAGE}
     E a pagina devera conter  Invalid credentials
-    E tira Print      CT02_MensagemDeErro
+    E tira Print      CT02_MensagemDeErro    
 
-CT03 - Login com usuario nao registrado
+CT03_ValidarLoginComUsuarioNaoRegistrado
     Dado que o usuario esta na pagina de login
     E Preencha o formulario com os dados    ${INVALID_USERNAME}    ${INVALID_PASSWORD}
-    E tira Print      CT03_CredenciaisPreenchidas
+    E tira Print      CT03_CredenciaisPreenchidas 
     Quando clicar no botao "Login"
     Entao devera estar na pagina   ${URL_LOGIN_PAGE}
     E a pagina devera conter  Invalid credentials
-    E tira Print      CT03_MensagemDeErro
+    E tira Print      CT03_MensagemDeErro    
 
-CT04 - Campos obrigatorios nao preenchidos
+CT04_ValidarCamposObrigatoriosNaoPreenchidos
     Dado que o usuario esta na pagina de login
     E Preencha o formulario com os dados    ${EMPTY_CREDENTIALS}    ${EMPTY_CREDENTIALS}
     E tira Print   CT04_CredenciaisEmBranco
@@ -43,7 +43,7 @@ CT04 - Campos obrigatorios nao preenchidos
     E a pagina devera conter    Required
     E tira Print     CT04_MensagemDeErro
 
-CT05 - Acessar pagina "Forgot your password"
+CT05_ValidarAcessoPaginaForgotYourPassword
     Dado que o usuario esta na pagina de login
     E tira Print    CT05_ForgotPassword
     Quando clicar em "Forgot Password"
@@ -51,35 +51,35 @@ CT05 - Acessar pagina "Forgot your password"
     E a pagina devera conter  Reset Password
     E tira Print      CT05_ResetPasswordPage
 
-CT06 - Acessar LinkedIn
+CT06_ValidarAcessoLinkedIn
     Dado que o usuario esta na pagina de login
     E tira Print    CT06_LinkedIn
     Quando clicar na rede social    ${URL_LINKEDIN}
     Entao devera estar na pagina   ${LINKEDIN_PAGE}
     E tira Print      CT06_LinkedInPage
 
-CT07 - Acessar Youtube
+CT07_ValidarAcessoYoutube
     Dado que o usuario esta na pagina de login
     E tira Print    CT07_Youtube
     Quando clicar na rede social    ${URL_YOUTUBE}
     Entao devera estar na pagina   ${YOUTUBE_PAGE}
     E tira Print      CT07_YoutubeInPage
 
-CT08 - Acessar Facebook
+CT08_ValidarAcessoFacebook
     Dado que o usuario esta na pagina de login
     E tira Print    CT08_Facebook
     Quando clicar na rede social    ${URL_FACEBOOK}
     Entao devera estar na pagina   ${FACEBOOK_PAGE}
     E tira Print      CT08_FacebookPage
 
-CT09 - Acessar Twitter
+CT09_ValidarAcessoTwitter
     Dado que o usuario esta na pagina de login
     E tira Print    CT09_Twitter
     Quando clicar na rede social    ${URL_TWITTER}
     Entao devera estar na pagina   ${TWITTER_PAGE}
     E tira Print      CT09_TwitterPage
 
-CT10 - Acessar OrangeHRM
+CT10_ValidarAcessoOrangeHRM
     Dado que o usuario esta na pagina de login
     E tira Print    CT10_OrangeHRM
     Quando clicar na rede social    ${URL_ORANGEHRM}

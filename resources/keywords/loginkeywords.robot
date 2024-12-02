@@ -1,13 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library            ScreenCapLibrary
+Library    ScreenCapLibrary
+Library    DateTime
+Library    ../utils/PrintScreen.py
 Resource    ../variables/loginvariables.robot
 
 *** Keywords ***
 
 Dado que o usuario esta na pagina de login
-    Open Browser    ${URL_LOGIN_PAGE}    Chrome
-    Wait Until Element Is Visible    body   timeout=10
+    Open Browser    ${URL_LOGIN_PAGE}    Chrome    options=add_argument("--start-maximized")
+    Wait Until Element Is Visible    xpath=/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form   timeout=10
 
 E Preencha o formulario com os dados    
     [Arguments]    ${username}    ${password}
@@ -37,9 +39,11 @@ Entao devera estar na pagina
     Should Be Equal    ${current_url}    ${expected_url}
 
 E tira Print   
-    [Arguments]    ${name}
-    Wait Until Keyword Succeeds    10s    1s    Page Should Contain Element    tag:body
-    Capture Page Screenshot    ../results/screenshots/${name}.png
+    [Arguments]    ${name}    
+    Wait Until Keyword Succeeds    10s    1s    Execute JavaScript    return document.readyState === 'complete';
+    ${screenshot}=    Tira Screenshot    ${TEST_NAME}    ${name}
+    ${html_foto}=    Set Variable    <a href="${screenshot}" target="_blank"><img src="${screenshot}" width="500"></a>
+    Log    ${html_foto}    html=true
 
 E a pagina devera conter
     [Arguments]    ${text}
@@ -54,3 +58,7 @@ Espera Abrir Nova Aba
     ${current_handles}=    Get Window Handles
     Run Keyword If    ${current_handles} != ${original_handles}    Return From Keyword
     Fail    Nova aba não foi aberta ainda
+
+Comeca a Gravar a Tela
+    ${current_date}=    Get Current Date    result_format=%Y-%m-%d
+    Start Video Recording  name=${TEST_NAME}+${current_date}  monitor=2
