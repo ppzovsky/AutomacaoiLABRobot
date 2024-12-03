@@ -57,11 +57,7 @@ Garantir que a funcionalidade de login do OrangeHRM opere corretamente para dife
 ### Dependências (requirements.txt)
 ```plaintext
 robotframework
-robotframework-seleniumlibrary
-robotframework-browser
-robotframework-screencap
-robotframework-faker
-robotframework-datetime
+pip install -r requirements.txt
 ```
 
 ### Configuração do Navegador
