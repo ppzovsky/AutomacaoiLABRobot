@@ -6,14 +6,13 @@ pool:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.12'  
+    versionSpec: '3.10'
+    addToPath: true
+    architecture: 'x64'
+  
 
 - script: |
-    pip install robotframework
-    pip install robotframework-seleniumlibrary  
-    pip install robotramework-faker
-    pip install robotframework-screencaplibrary
-    pip install robotframework-datetime
+    pip install -r requirements.txt
   displayName: 'Instalar dependências do Robot Framework'
 
 - script: |
